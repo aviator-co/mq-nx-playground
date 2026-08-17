@@ -53,3 +53,8 @@ npx nx g @nx/js:library packages/<name> --name=<name> --bundler=tsc --unitTestRu
 
 Then wire it into the dep graph by adding an import in `src/lib/<name>.ts`
 and a `"@org/<dep>": "*"` line in its `package.json`.
+
+## Merge queue demo
+
+This workspace is used to exercise Aviator's merge queue with Nx affected targets.
+Each package maps to a queue target: `shared`, `api`, `web`, `cli`.
